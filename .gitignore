@@ -1,5 +1,4 @@
-bower_components
-node_modules
 .DS_Store
 .vagrant
-*.log
+wp-config.php
+wp-content/uploads
