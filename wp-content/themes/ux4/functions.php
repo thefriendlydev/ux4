@@ -15,10 +15,12 @@ require_once 'includes/wordpress_functions/sidebars.php';
 require_once 'includes/wordpress_functions/hide_editor.php';
 
 //-- Custom Post Type --------------------------------------------
-require_once 'includes/post_types/valuable_finds.php';
+require_once 'includes/post_types/case_studies.php';
+require_once 'includes/post_types/services.php';
 
 //-- Custom Fields Definitions --------------------------------------------
-
+require_once 'includes/custom_fields/case_study.php';
+require_once 'includes/custom_fields/service.php';
 
 //-- Utils ----------------------------------------------------------------
 include_once 'includes/utils/asset_link.php';

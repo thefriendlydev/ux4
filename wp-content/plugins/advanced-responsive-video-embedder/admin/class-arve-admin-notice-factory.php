@@ -1,16 +1,24 @@
 <?php
 
-class Advanced_Responsive_Video_Embedder_Admin_Notice_Factory {
+class ARVE_Admin_Notice_Factory {
 
   private $notice_id;
   private $notice;
   private $dismiss_forever;
 
-  function __construct( $notice_id, $notice, $dismiss_forever = true ) {
+  function __construct( $notice_id, $notice, $dismiss_forever = true, $capabilities = 'activate_plugins' ) {
+
+    if ( ! current_user_can( $capabilities ) ) {
+      return;
+    }
 
     $this->notice_id       = "admin-notice-factory-$notice_id";
     $this->notice          = $notice;
     $this->dismiss_forever = $dismiss_forever;
+
+    if ( 'admin-notice-factory-arve_dismiss_pro_notice' == $this->notice_id ) {
+      $this->notice_id = 'arve_dismiss_pro_notice';
+    }
 
 		add_action( 'admin_notices', array( $this, 'action_admin_notices' ) );
     add_action( 'wp_ajax_' . $this->notice_id, array( $this, 'ajax_call' ) );
