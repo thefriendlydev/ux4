@@ -18,27 +18,7 @@ require_once 'includes/wordpress_functions/hide_editor.php';
 require_once 'includes/post_types/valuable_finds.php';
 
 //-- Custom Fields Definitions --------------------------------------------
-require_once 'includes/custom_fields/home/video_cta.php';
-require_once 'includes/custom_fields/home/service_links.php';
-require_once 'includes/custom_fields/home/person_left_green.php';
-require_once 'includes/custom_fields/home/person_right_grey.php';
-require_once 'includes/custom_fields/home/certifications.php';
-require_once 'includes/custom_fields/certifications_facility/certification_logos.php';
-require_once 'includes/custom_fields/certifications_facility/opp.php';
-require_once 'includes/custom_fields/services/services_page.php';
-require_once 'includes/custom_fields/recycling/certifications.php';
-require_once 'includes/custom_fields/itad/security.php';
-require_once 'includes/custom_fields/our_story/circle_points.php';
-require_once 'includes/custom_fields/our_story/about_video.php';
-require_once 'includes/custom_fields/precious_metals/walkins.php';
-require_once 'includes/custom_fields/precious_metals/valuable_finds.php';
-require_once 'includes/custom_fields/precious_metals/precious_thoughts.php';
-require_once 'includes/custom_fields/shared/right_cta.php';
-require_once 'includes/custom_fields/shared/right_points.php';
-require_once 'includes/custom_fields/options/footer_cta.php';
-require_once 'includes/custom_fields/post_types/valuable_finds.php';
-require_once 'includes/custom_fields/post_types/blog.php';
-require_once 'includes/custom_fields/contact/contact_us.php';
+
 
 //-- Utils ----------------------------------------------------------------
 include_once 'includes/utils/asset_link.php';

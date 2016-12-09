@@ -11,9 +11,7 @@
 
   <link href="<?php bloginfo('template_url'); ?>/dist/img/favicon.ico" rel="icon" type="image/x-icon">
   <link href="<?php bloginfo('template_url'); ?>/dist/<?php AssetLink::manifest_url('application.css'); ?>" rel="stylesheet">
-  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="<?php bloginfo('template_url'); ?>/dist/<?php AssetLink::manifest_url('application.js'); ?>"></script>
-  <script src="https://apis.google.com/js/client.js"></script>
 
   <!-- TypeKit Fonts -->
   <script src="https://use.typekit.net/bhb0knn.js"></script>
