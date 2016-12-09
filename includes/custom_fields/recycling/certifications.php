@@ -1,0 +1,118 @@
+<?php
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+  'key' => 'group_5779d2b4bff8a',
+  'title' => 'Certifications',
+  'fields' => array (
+    array (
+      'key' => 'field_5779d3316d424',
+      'label' => 'Certification Intro Text',
+      'name' => 'certification_intro_text',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => '',
+      'conditional_logic' => '',
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => 'We\'re the most responsible and certified partner for your e-recycling needs.',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_5779d2d46d421',
+      'label' => 'Certifications',
+      'name' => 'certifications',
+      'type' => 'repeater',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'collapsed' => '',
+      'min' => '',
+      'max' => '',
+      'layout' => 'table',
+      'button_label' => 'Add Certification',
+      'sub_fields' => array (
+        array (
+          'key' => 'field_5779d3096d422',
+          'label' => 'Certification Logo',
+          'name' => 'certification_logo',
+          'type' => 'image',
+          'instructions' => '',
+          'required' => 1,
+          'conditional_logic' => 0,
+          'wrapper' => array (
+            'width' => '',
+            'class' => '',
+            'id' => '',
+          ),
+          'return_format' => 'url',
+          'preview_size' => 'thumbnail',
+          'library' => 'all',
+          'min_width' => '',
+          'min_height' => '',
+          'min_size' => '',
+          'max_width' => '',
+          'max_height' => '',
+          'max_size' => '',
+          'mime_types' => '',
+        ),
+        array (
+          'key' => 'field_5779d31e6d423',
+          'label' => 'Certification Name',
+          'name' => 'certification_name',
+          'type' => 'text',
+          'instructions' => '',
+          'required' => 1,
+          'conditional_logic' => 0,
+          'wrapper' => array (
+            'width' => '',
+            'class' => '',
+            'id' => '',
+          ),
+          'default_value' => '',
+          'placeholder' => '',
+          'prepend' => '',
+          'append' => '',
+          'maxlength' => '',
+          'readonly' => 0,
+          'disabled' => 0,
+        ),
+      ),
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'page_template',
+        'operator' => '==',
+        'value' => 'page-recycling.php',
+      ),
+    ),
+  ),
+  'menu_order' => 1,
+  'position' => 'acf_after_title',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => array (
+    0 => 'the_content',
+  ),
+  'active' => 1,
+  'description' => '',
+));
+
+endif;

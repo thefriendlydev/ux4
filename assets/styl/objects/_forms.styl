@@ -1,0 +1,56 @@
+.formField
+  p
+    margin: 0
+
+.label
+  font-size: 20px
+  line-height: 1.25
+  margin-bottom: 8px
+  @media breakpoints.lap.breakpoint
+    font-size: 18px
+
+select
+  font-family: primaryFont
+  background: #FFFFFF
+  padding: 13px 17px
+  border: 1px solid lightGrey
+  margin-bottom: 15px
+
+input, textarea
+  box-sizing: border-box
+  -webkit-appearance: none
+  border: 2px solid ediGreen
+  border-radius: 5px
+  background: #FFFFFF
+  padding: 10px 17px
+  transition: all 0.2s ease-in-out
+  margin: 0
+  margin-bottom: 15px
+  font-family: primaryFont
+  font-size: 20px
+  outline: 0
+  width: 100%
+  @media breakpoints.palm.breakpoint
+    padding: 10px 17px
+    width: 100%
+  @media breakpoints.lap.breakpoint
+    font-size: 18px
+
+  &:focus, &:active
+    outline: 0
+
+textarea
+  height: 160px
+
+input[type=submit]
+  width: auto
+  border: 2px solid ediGreen
+  background-color: transparent
+  color: ediGreen
+  border-radius: 50px
+  cursor: pointer
+  padding: 8px 30px
+  &:hover
+    background-color: ediGreen
+    color: #FFFFFF
+

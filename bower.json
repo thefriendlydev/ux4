@@ -1,0 +1,31 @@
+{
+  "name": "ux4",
+  "version": "0.0.0",
+  "description": "thefriendlydev",
+  "homepage": "https://github.com/thefriendlydev/ux4",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-sanitize": "~1.4.4",
+    "angular-touch": "~1.4.5",
+    "angular-animate": "~1.4.8",
+    "animate.css": "~3.5.0",
+    "jquery": "~2.1.4",
+    "loaders.css": "~0.1.1",
+    "lodash": "~3.10.1",
+    "youtube-iframe-api": "~0.0.1",
+    "matchHeight": "matchheight#~0.7.0"
+  },
+  "devDependencies": {
+    "twg-frontend-scaffolding": "~0.1.2"
+  },
+  "resolutions": {
+    "angular": ">= 1.0.8"
+  }
+}
