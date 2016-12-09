@@ -22,9 +22,7 @@ var vendorJs = [
   'bower_components/angular-animate/angular-animate.js',
   'bower_components/jquery/dist/jquery.min.js',
   'bower_components/lodash/lodash.js',
-  'bower_components/youtube-iframe-api/youtube.iframe-api.js',
-  'bower_components/matchHeight/dist/jquery.matchHeight.js',
-  'node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js'
+  'bower_components/matchHeight/dist/jquery.matchHeight.js'
 ]
 
 var vendorCss = [
