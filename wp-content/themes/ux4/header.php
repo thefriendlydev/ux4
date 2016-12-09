@@ -24,7 +24,9 @@
     <div class="siteBody">
       <div class="primaryNav">
         <div class="container">
-          <div class="primaryNav-logo"><a href="/"><img src="<?php bloginfo('template_url'); ?>/dist/img/nav-logo.png"></a><a href="https://sustainableelectronics.org/r2-standard" target="_blank"><img class="primaryNav-grayscale" src="<?php bloginfo('template_url'); ?>/dist/img/cert-r2.png"></a></div>
+          <a href="/" class="navLogo">
+            <img src="<?php bloginfo('template_url'); ?>/dist/img/logo-white.png">
+          </a>
           <?php wp_nav_menu( array( 'theme_location' => 'primary-nav', 'container_class' => 'primaryNav-items', 'menu_class' => 'navigation-list' ) ); ?>
         </div>
       </div>
