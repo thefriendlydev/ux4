@@ -7,6 +7,9 @@ window.UXTabs = function() {
     init: function(tabNav) {
       this.tabNav = tabNav;
       this.tabContent = $(tabNav).data('tab-content');
+      if($(tabNav).data('tab-default')) {
+        this.setActiveTab($(tabNav).data('tab-default'));
+      }
       $(tabNav).on('click', 'li', this.onclick.bind(this));
     },
 

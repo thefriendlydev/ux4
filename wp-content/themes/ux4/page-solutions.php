@@ -17,7 +17,7 @@
 
 <br><br><br>
 
-<div class="section-tabs ux-tabs" data-tab-content='.tabContent'>
+<div class="section-tabs ux-tabs" data-tab-content='.tabContent' data-tab-default='applications'>
   <ul>
     <li data-tab="applications">Applications</li>
     <li data-tab="websites">Websites</li>

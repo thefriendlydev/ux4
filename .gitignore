@@ -2,3 +2,6 @@
 .vagrant
 wp-config.php
 wp-content/uploads
+Vagrantfile
+ansible
+wp-config-local.php
