@@ -3,41 +3,22 @@
   text-align: center
   cursor: pointer
   transition: all 0.2s ease-in-out
-  padding: 8px 30px
+  padding: 10px 16px
   display: inline-block
   text-decoration: none
-  border-radius: 50px
+  border-radius: 3px
   font-size: 18px
   line-height: 1.2
-  font-weight: 600
-  @media breakpoints.palm.breakpoint
-    font-size: 16px
-
-.button--icon
-  background-color: ctaGreen
+  font-weight: 400
+  background-color: uxGold
+  border: 1px solid darken(uxGold, 5)
   &:hover
-    background-color: lighten(ctaGreen, 5)
+    background-color: darken(uxGold, 5)
 
-.button--yellow
-  border: 2px solid ediYellow
+.button--secondary
+  border: 3px solid uxGold
   background-color: transparent
-  color: ediYellow
+  color: uxGold
   &:hover
-    background-color: ediYellow
+    background-color: uxGold
     color: #FFFFFF
-
-.button--ctaGreen
-  border: 2px solid ctaGreen
-  background-color: transparent
-  color: ctaGreen
-  &:hover
-    background-color: ctaGreen
-    color: #FFFFFF
-
-.button--ctaSolidGreen
-  border: 2px solid ctaGreen
-  background-color: ctaGreen
-  color: #FFFFFF
-  &:hover
-    background-color: lighten(ctaGreen, 5)
-    border: 2px solid lighten(ctaGreen, 5)

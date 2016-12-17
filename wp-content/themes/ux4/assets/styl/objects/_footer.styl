@@ -1,41 +1,32 @@
-.footerLogo img
-  max-height: 24px
-  width: auto
-  @media breakpoints.palm.breakpoint
-    margin-bottom: 15px
-
-.footer
-  background-color: darkGrey
-
-.footerInfo
-  padding: 30px 0
-  border-bottom: 1px solid rgba(162,163,162,0.5)
-  .footerText
-    color: #a2a3a2
-    font-size: 14px
+.section.footer
+  background-color: uxText
+  padding: 25px 15px
+  text-align: center
   a
-    color: #FFFFFF
-    font-size: 14px
-    text-decoration: none
+    color: #D8A629
     &:hover
-      text-decoration: underline
+      opacity: 0.9
 
-.footerCertifications
-  padding: 30px 0 90px
+.footerPhone
+  font-weight: 700
+  margin-bottom: 8px
+  color: #FFFFFF
 
-.footerCertification
-  display: inline-block
-  margin-right: 20px
-  img
-    max-height: 35px
-    width: auto
-    // filter: grayscale(50%)
+.footerAddress, .footerSocial
+  margin-bottom: 25px
+  color: #FFFFFF
+
+.footerSocial .icon
+  margin: 0 20px
+  color: #FFFFFF
+  font-size: 40px
+  &:hover
+    darken(#FFFFFF, 10)
 
 .footerLegal
-  overflow: auto
-  padding: 30px 0
-
-.copyright
-  // float: right
-  color: #a2a3a2
-  font-size: 14px
+  font-size: 13px
+  color: #FFFFFF
+  a
+    color: #FFFFFF
+    &:hover
+      opacity: 0.9

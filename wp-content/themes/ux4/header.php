@@ -25,8 +25,9 @@
       <div class="primaryNav">
         <div class="container">
           <a href="/" class="navLogo">
-            <img src="<?php bloginfo('template_url'); ?>/dist/img/logo-white.png">
+            <img src="<?php bloginfo('template_url'); ?>/dist/img/logo.png">
           </a>
+          <div class="icon icon-menu"></div>
           <?php wp_nav_menu( array( 'theme_location' => 'primary-nav', 'container_class' => 'primaryNav-items', 'menu_class' => 'navigation-list' ) ); ?>
         </div>
       </div>

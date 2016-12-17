@@ -3,15 +3,38 @@ html, body, p
   font-size: base-font-size
   line-height: base-line-height
   font-weight: base-font-weight
-  color: darkGrey
+  color: uxText
 
 h1, h2, h3, h4, h5, h6
   font-family: headerFont
   margin: 0
 
+h1
+  font-weight: 700
+  font-size: 30px
+  line-height: 1.33
+
+h2
+  font-weight: 700
+  font-size: 26px
+  color: uxBlue
+  text-align: center
+
+h3
+  font-size: 20px
+  font-weight: 300
+  line-height: 1.5
+
+p
+  line-height: 1.625
+  margin: 0
+
 a
   text-decoration: none
   transition: all 0.2s ease-in-out
+  color: uxLightBlue
+  &:hover
+    darken(uxLightBlue, 10)
 
 // typekit flicker
 .wf-loading *
@@ -19,3 +42,7 @@ a
 
 .wf-active *
   visibility: visible
+
+img
+  max-width: 100%
+  height: auto
