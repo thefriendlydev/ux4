@@ -69,19 +69,23 @@ if(count($clients) > 0):
         <div class="grid-1of1--palm grid-1of3" data-tab-filter="<?= get_field('project_type')[0]->slug; ?>">
           <div class="clientTile">
             <div class="clientTile-top">
-              <?php if (get_field('client_logo')) : ?>
-                <div>
-                  <img class="clientTile-logo" src="<?= the_field('client_logo'); ?>">
-                </div>
-              <?php else : ?>
-                <div class="clientTile-logoText"><?= the_field('client_logo_text'); ?></div>
-              <?php endif; ?>
+              <div class="clientTile-topContainer">
+                <?php if (get_field('client_logo')) : ?>
+                  <div>
+                    <img class="clientTile-logo" src="<?= the_field('client_logo'); ?>">
+                  </div>
+                <?php else : ?>
+                  <div class="clientTile-logoText"><?= the_field('client_logo_text'); ?></div>
+                <?php endif; ?>
 
-              <div class="clientTile-text"><?= the_field('hero_text'); ?></div>
+                <div class="clientTile-text"><?= the_field('hero_text'); ?></div>
+              </div>
             </div>
             <?php if (get_field('casestudy')) : ?>
               <div class="clientTile-bottom">
+                <div class="clientTile-bottomContainer">
                   <a href="<?php the_permalink(); ?>"><span>Read the case study</span> <i class="icon icon-circle-right-arrow"></i></a>
+                </div>
               </div>
             <?php endif; ?>
           </div>
