@@ -23,6 +23,7 @@ require_once 'includes/post_types/testimonials.php';
 require_once 'includes/custom_fields/client.php';
 require_once 'includes/custom_fields/service.php';
 require_once 'includes/custom_fields/about.php';
+require_once 'includes/custom_fields/contact.php';
 require_once 'includes/custom_fields/home.php';
 require_once 'includes/custom_fields/work.php';
 require_once 'includes/custom_fields/footer.php';

@@ -1,40 +1,60 @@
-.formField
-  p
-    margin: 0
-
-.label
-  font-size: 20px
-  line-height: 1.25
-  margin-bottom: 8px
-  @media breakpoints.lap.breakpoint
-    font-size: 18px
+.formLabel
+  font-size: 16px
+  color: #FFFFFF
+  margin-bottom: 5px
+  .required
+    color: uxGold
 
 select
-  font-family: primaryFont
-  background: #FFFFFF
-  padding: 13px 17px
-  border: 1px solid lightGrey
-  margin-bottom: 15px
-
-input, textarea
   box-sizing: border-box
   -webkit-appearance: none
-  border: 2px solid ediGreen
-  border-radius: 5px
-  background: #FFFFFF
-  padding: 10px 17px
+  -moz-appearance: none
+  appearance: none
+  border: 1px solid #FFFFFF
+  border-radius: 2px
+  background: rgba(255,255,255,0.3)
+  padding: 13px 15px
   transition: all 0.2s ease-in-out
   margin: 0
   margin-bottom: 15px
   font-family: primaryFont
-  font-size: 20px
+  font-size: 16px
   outline: 0
   width: 100%
-  @media breakpoints.palm.breakpoint
-    padding: 10px 17px
-    width: 100%
-  @media breakpoints.lap.breakpoint
-    font-size: 18px
+  color: #FFFFFF
+  box-shadow: none
+  background-image: none
+  position: relative
+  &:focus
+    outline: none
+
+.your-interest
+  &:after
+    content: "\e919"
+    font-family: icomoon
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px
+    position: absolute
+    right: 15px
+    top: 3px
+    color: #FFFFFF
+    pointer-events: none
+input, textarea
+  box-sizing: border-box
+  -webkit-appearance: none
+  border: 1px solid #FFFFFF
+  border-radius: 2px
+  background: rgba(255,255,255,0.3)
+  padding: 13px 15px
+  transition: all 0.2s ease-in-out
+  margin: 0
+  margin-bottom: 15px
+  font-family: primaryFont
+  font-size: 16px
+  outline: 0
+  width: 100%
+  color: #FFFFFF
 
   &:focus, &:active
     outline: 0
@@ -44,13 +64,4 @@ textarea
 
 input[type=submit]
   width: auto
-  border: 2px solid ediGreen
-  background-color: transparent
-  color: ediGreen
-  border-radius: 50px
-  cursor: pointer
-  padding: 8px 30px
-  &:hover
-    background-color: ediGreen
-    color: #FFFFFF
 
