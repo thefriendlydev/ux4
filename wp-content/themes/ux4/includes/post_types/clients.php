@@ -38,7 +38,30 @@ class Client {
     register_post_type('client', $settings);
   }
 
+  public static function posts() {
+    $query = [
+      'posts_per_page' => - 1,
+      'post_type'      => 'client',
+      'orderby'        => 'date',
+      'order'          => 'ASC',
+      'meta_key'       => 'casestudy',
+      'meta_value'     => '1'
+    ];
+    $case_studies = new WP_Query($query);
 
+    $query['meta_value'] = '0';
+    $non_case_studies = new WP_Query($query);
+    return array_merge($case_studies->posts, $non_case_studies->posts);
+  }
+
+  public static function project_types() {
+    $query = [
+      'hide_empty' => false,
+      'taxonomy'   => 'category',
+      'slug'       => ['website', 'application', 'consulting']
+    ];
+    return get_terms($query);
+  }
 
 }
 

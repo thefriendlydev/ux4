@@ -14,7 +14,6 @@
 ?>
 
 <?php get_header(); ?>
-
 <div class="section hero">
   <div class="bgImage" style="background-image: url(<?= the_field('hero_background_image'); ?>)">
     <div class="blueOverlay">
@@ -38,21 +37,28 @@
   </div>
 </div>
 
+
 <?php
-  $clients = new WP_Query( array(
-  "posts_per_page" => - 1,
-  "post_type" => "client",
-  "orderby" => "date",
-  "order" => "ASC"
-  ) );
+$clients = Client::posts();
+if(count($clients) > 0):
 ?>
-<?php if ( $clients->have_posts() ) : ?>
+
+<div class="section-tabs ux-tabs" data-tab-content='.clientTiles'>
+  <ul>
+    <?php foreach(Client::project_types() as $project_type): ?>
+      <li data-tab="<?= $project_type->slug; ?>">
+        <?= $project_type->name; ?>
+      </li>
+    <?php endforeach; ?>
+  </ul>
+</div><!-- .section-tabs -->
 
 <div class="section clientTiles">
   <div class="container">
     <div class="grid">
-      <?php while ( $clients->have_posts() ) : $clients->the_post(); ?>
-        <div class="grid-1of1--palm grid-1of3">
+
+      <?php foreach(Client::posts() as $client): $post = $client; setup_postdata($post); ?>
+        <div class="grid-1of1--palm grid-1of3" data-tab-filter="<?= get_field('project_type')[0]->slug; ?>">
           <div class="clientTile">
             <div class="clientTile-top">
               <?php if (get_field('client_logo')) : ?>
@@ -72,7 +78,8 @@
             <?php endif; ?>
           </div>
         </div>
-      <?php endwhile;  ?>
+      <?php endforeach; ?>
+
       <?php wp_reset_query(); ?>
       <?php wp_reset_postdata();  ?>
     </div>
