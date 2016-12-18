@@ -11,15 +11,48 @@
   margin-bottom: 20px
 
 .projectService
-  padding: 5px 10px
-  font-size: 14px
-  color: uxLightBlue
-  border: 2px solid uxLightBlue
-  border-radius: 5px
+  position: relative
   display: inline-block
-  margin-right: 10px
-  margin-bottom: 10px
-  cursor: pointer
-  &:hover
-    background-color: uxLightBlue
+  a
+    padding: 5px 10px
+    font-size: 14px
+    color: uxLightBlue
+    border: 2px solid uxLightBlue
+    border-radius: 5px
+    display: inline-block
+    margin-right: 10px
+    margin-bottom: 10px
+    cursor: pointer
+    &:hover
+      background-color: uxLightBlue
+      color: #FFFFFF
+
+.projectService-description
+  display: none
+
+.projectService:hover > .projectService-description
+  display: block
+
+.projectService-description
+  position: absolute
+  bottom: 51px
+  left: -15px
+  width: 200px
+  padding: 10px
+  background-color: uxLightBlue
+  z-index: 5
+  border-radius: 3px
+  p
     color: #FFFFFF
+    font-size: 14px
+  &:before
+    content:''
+    display:block
+    width:0
+    height:0
+    position:absolute
+    border-top: 12px solid uxLightBlue
+    border-right: 12px solid transparent
+    border-left: 12px solid transparent
+    left: 30px
+    bottom: -10px
