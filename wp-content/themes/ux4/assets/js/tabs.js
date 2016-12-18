@@ -3,10 +3,14 @@ window.UXTabs = function() {
     activeTab: null,
     tabNav: null,
     tabContent: null,
+    allowEmpty: true,
 
     init: function(tabNav) {
       this.tabNav = tabNav;
       this.tabContent = $(tabNav).data('tab-content');
+      if($(tabNav).data('tab-allow-empty') === false) {
+        this.allowEmpty = false;
+      }
       if($(tabNav).data('tab-default')) {
         this.setActiveTab($(tabNav).data('tab-default'));
       }
@@ -19,7 +23,9 @@ window.UXTabs = function() {
       if(tab !== this.activeTab) {
         this.setActiveTab(tab);
       } else {
-        this.setActiveTab(null);
+        if(this.allowEmpty) {
+          this.setActiveTab(null);
+        }
       }
     },
 
