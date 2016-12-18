@@ -43,7 +43,15 @@ $clients = Client::posts();
 if(count($clients) > 0):
 ?>
 
-<div class="section-tabs ux-tabs" data-tab-content='.clientTiles'>
+<div class="section-tabs ux-tabs u-noLarge" data-tab-content='.clientTiles'>
+  <ul>
+    <li data-tab="application">Application</li>
+    <li data-tab="website">Website</li>
+    <li data-tab="consulting">Consulting</li>
+  </ul>
+</div><!-- .section-tabs -->
+
+<div class="section-tabs ux-tabs u-noMobile" data-tab-content='.clientTiles'>
   <ul>
     <?php foreach(Client::project_types() as $project_type): ?>
       <li data-tab="<?= $project_type->slug; ?>">

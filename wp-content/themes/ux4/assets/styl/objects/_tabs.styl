@@ -1,0 +1,27 @@
+.ux-tabs
+  text-align: center
+  ul
+    @extend .plainList
+    border: 3px solid uxRed
+    display: table
+    border-radius: 3px
+    margin: 0 auto 30px
+    li
+      padding: 10px
+      text-align: center
+      min-width: 115px
+      color: uxRed
+      font-size: 14px
+      font-weight: 600
+      transition: all 0.2s ease-in-out
+      display: table-cell
+      border-right: 3px solid uxRed
+      cursor: pointer
+      &:last-child
+        border-right: 0
+      &.active
+        background-color: uxRed
+        color: #FFFFFF
+      &:hover
+        background-color: uxRed
+        color: #FFFFFF

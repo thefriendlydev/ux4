@@ -42,8 +42,15 @@
         if( $services ): ?>
           <?php foreach( $services as $post): // variable must be called $post (IMPORTANT) ?>
             <?php setup_postdata($post); ?>
-              <a class="projectService"><?php the_title(); ?></a>
-              <div class="u-none"><?= the_field('service_description'); ?></div>
+              <div class="projectService">
+                <a><?php the_title(); ?></a>
+                <div class="projectService-description"><?= the_field('service_description'); ?></div>
+                <!-- <div class="serviceOverlay active"></div>
+                <div class="serviceModal active">
+                  <div class="serviceTitle"><?php the_title(); ?></div>
+                  <div class="serviceDescription"><?= the_field('service_description'); ?></div>
+                </div> -->
+              </div>
           <?php endforeach; ?>
           <?php wp_reset_postdata(); ?>
         <?php endif; ?>
