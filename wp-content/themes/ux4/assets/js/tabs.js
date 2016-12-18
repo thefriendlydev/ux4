@@ -18,10 +18,13 @@ window.UXTabs = function() {
       e.preventDefault();
       if(tab !== this.activeTab) {
         this.setActiveTab(tab);
+      } else {
+
       }
     },
 
     setActiveTab: function(tab) {
+      this.activeTab = tab
       $(this.tabNav).find('li').removeClass('active');
       $(this.tabNav).find('[data-tab="' + tab + '"]').addClass('active');
       $(this.tabContent).find('[data-tab-filter]').each(function(index, el) {

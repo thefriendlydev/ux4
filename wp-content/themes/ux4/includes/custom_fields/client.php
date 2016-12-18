@@ -179,7 +179,7 @@ acf_add_local_field_group(array (
       'return_format' => 'object',
     ),
     array (
-      'key' => 'field_58517d7297197',
+      'key' => 'field_5856c1ffc5ddf',
       'label' => 'Icon Section With Bullets',
       'name' => 'icon_section_with_bullets',
       'type' => 'repeater',
@@ -198,7 +198,7 @@ acf_add_local_field_group(array (
       'button_label' => 'Add Section',
       'sub_fields' => array (
         array (
-          'key' => 'field_58517d9997198',
+          'key' => 'field_5856c255c5de0',
           'label' => 'Icon Name',
           'name' => 'icon_name',
           'type' => 'text',
@@ -219,7 +219,7 @@ acf_add_local_field_group(array (
           'disabled' => 0,
         ),
         array (
-          'key' => 'field_58517dea97199',
+          'key' => 'field_5856c25bc5de1',
           'label' => 'Section Title',
           'name' => 'section_title',
           'type' => 'text',
@@ -240,7 +240,7 @@ acf_add_local_field_group(array (
           'disabled' => 0,
         ),
         array (
-          'key' => 'field_58517df29719a',
+          'key' => 'field_5856c2abc5de2',
           'label' => 'Bullets',
           'name' => 'bullets',
           'type' => 'repeater',
@@ -255,14 +255,14 @@ acf_add_local_field_group(array (
           'collapsed' => '',
           'min' => '',
           'max' => '',
-          'layout' => 'table',
+          'layout' => 'block',
           'button_label' => 'Add Bullet',
           'sub_fields' => array (
             array (
-              'key' => 'field_58517e039719b',
+              'key' => 'field_5856c2d9c5de3',
               'label' => 'Bullet Text',
               'name' => 'bullet_text',
-              'type' => 'text',
+              'type' => 'textarea',
               'instructions' => '',
               'required' => 0,
               'conditional_logic' => 0,
@@ -273,14 +273,14 @@ acf_add_local_field_group(array (
               ),
               'default_value' => '',
               'placeholder' => '',
-              'prepend' => '',
-              'append' => '',
               'maxlength' => '',
+              'rows' => '',
+              'new_lines' => 'wpautop',
               'readonly' => 0,
               'disabled' => 0,
             ),
             array (
-              'key' => 'field_58517e109719c',
+              'key' => 'field_5856c2efc5de4',
               'label' => 'Bullet Image',
               'name' => 'bullet_image',
               'type' => 'image',
