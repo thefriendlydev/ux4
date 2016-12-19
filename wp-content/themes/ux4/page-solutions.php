@@ -17,7 +17,7 @@
 
 <br><br><br>
 
-<div class="section-tabs ux-tabs u-noLarge" data-tab-content='.tabContent' data-tab-default='applications'>
+<div class="section-tabs ux-tabs u-noLarge" data-tab-content='.tabContent' data-tab-default='applications' data-tab-allow-empty='false'>
   <ul>
     <li class="uxTab" data-tab="applications">Applications</li>
     <li class="uxTab" data-tab="websites">Websites</li>

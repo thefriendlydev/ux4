@@ -46,19 +46,20 @@
     <div class="clientLogosHeadline">
       <?= the_field('client_logos_headline'); ?>
     </div>
-    <div class="grid grid--middle">
-    <?php $client_logos = get_field('client_logos');
 
-      if( $client_logos ): ?>
-          <?php foreach( $client_logos as $post): // variable must be called $post (IMPORTANT) ?>
-              <?php setup_postdata($post); ?>
-              <div class="grid-1of2--palm grid-1of4">
+    <div class="">
+      <?php $client_logos = get_field('client_logos');
+        if( $client_logos ): ?>
+          <div class="grid grid--middle clientLogos-rotator">
+            <?php foreach( $client_logos as $post): setup_postdata($post); // variable must be called $post (IMPORTANT) ?>
+              <div class="grid-1of4 grid-2of4--palm clientLogos-logoWrapper">
                 <img class="clientLogos-logo" src="<?= the_field('client_logo'); ?>">
               </div>
-          <?php endforeach; ?>
-          <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-      <?php endif; ?>
-    </div>
+            <?php endforeach; wp_reset_postdata(); ?>
+          </div><!-- .grid -->
+        <?php endif; ?>
+    </div><!-- .logoRotator-->
+
   </div>
 </div>
 
