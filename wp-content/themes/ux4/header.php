@@ -25,12 +25,28 @@
 <body <?php body_class(); ?>>
   <div class="siteWrapper">
     <div class="siteBody">
-      <div class="primaryNav">
+      <div class="primaryNav u-noLarge">
         <div class="container">
           <a href="/" class="navLogo">
             <img src="<?php bloginfo('template_url'); ?>/dist/img/logo.png">
           </a>
           <div class="icon icon-menu"></div>
+          <div class="icon icon-close"></div>
           <?php wp_nav_menu( array( 'theme_location' => 'primary-nav', 'container_class' => 'primaryNav-items', 'menu_class' => 'navigation-list' ) ); ?>
+        </div>
+      </div>
+
+      <div class="primaryNav primaryNav--desk u-noMobile">
+        <div class="container">
+          <div class="combo combo--middle">
+            <div class="combo-first">
+              <a href="/" class="navLogo">
+                <img src="<?php bloginfo('template_url'); ?>/dist/img/logo.png">
+              </a>
+            </div>
+            <div class="combo-last">
+              <?php wp_nav_menu( array( 'theme_location' => 'primary-nav', 'container_class' => 'primaryNav-items', 'menu_class' => 'navigation-list' ) ); ?>
+            </div>
+          </div>
         </div>
       </div>

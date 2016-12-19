@@ -1,11 +1,16 @@
 .section.callout
   text-align: center
   .container
-    max-width: 600px
+    max-width: 630px
 
 .calloutText
   @extend h3
   margin-bottom: 30px
+  @media breakpoints.large.breakpoint
+    max-width: 470px
+    margin: 0 auto 30px
+  @media breakpoints.desk.breakpoint
+    max-width: 630px
 
 .callout--career
   background-color: uxBlue

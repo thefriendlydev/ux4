@@ -1,5 +1,7 @@
 .section.team
   padding: 0 0 50px
+  .container
+    max-width: 800px
 
 .aboutTeam
   margin-bottom: 40px
@@ -36,6 +38,17 @@
 .hero--careers
   .heroContent
     padding: 60px 0
+    @media breakpoints.large.breakpoint
+      padding: 110px 0
+    @media breakpoints.desk.breakpoint
+      padding: 160px 0
   .heroHeadline
     font-size: 26px
     margin-bottom: 20px
+    @media breakpoints.large.breakpoint
+      font-size: 32px
+      max-width: 460px
+      margin: 0 auto 20px
+    @media breakpoints.desk.breakpoint
+      font-size: 38px
+      margin: 0 auto 30px

@@ -3,24 +3,38 @@
 
 .section.solutionsIntro
   padding: 0
-  .combo
+  .container
+    max-width: 900px
+  .iconBullet
     margin-bottom: 0
+    .combo:last-child
+      margin-bottom: 0
   p
     margin-bottom: 15px
 
 .button--solutionsCta
   margin: 40px auto 50px
+  @media breakpoints.large.breakpoint
+    margin: 40px auto 80px
 
 .section.solutionService
   padding: 0 0 80px
+  .container
+    max-width: 900px
+  @media breakpoints.large.breakpoint
+    padding: 0 0 125px
   .service
     text-align: center
     .service-text
       text-align: left
       margin-bottom: 30px
+      @media breakpoints.large.breakpoint
+        max-width: 690px
 
 .projectServicesContainer
   margin-bottom: 50px
+  @media breakpoints.large.breakpoint
+    max-width: 690px
 
 .benefitsTitle, .caseStudyTitle
   font-weight: 700
@@ -30,6 +44,8 @@
 
 .benefitsContainer
   margin-bottom: 50px
+  @media breakpoints.large.breakpoint
+    max-width: 690px
 
 .grid--solutions
-  text-align: center
+  text-align: left

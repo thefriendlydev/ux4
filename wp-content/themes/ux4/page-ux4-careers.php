@@ -90,8 +90,6 @@
 
 <?php else: ?>
 
-  <h1>yo</h1>
-
 <?php endif; ?>
 
 

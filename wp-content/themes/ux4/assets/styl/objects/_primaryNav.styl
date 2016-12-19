@@ -63,7 +63,14 @@
         &:hover
           color: darken(uxLightBlue, 10)
 
+.icon-close
+  display: none
+
 .primaryNav.active
+  .icon-menu
+    display: none
+  .icon-close
+    display: block
   @extend .primaryNav--secondary
   bottom: 0
   left: 0
@@ -97,3 +104,56 @@
   right: 15px
   top: 18px
   cursor: pointer
+
+.icon-close
+  color: #FFFFFF
+  font-size: 20px
+  position: absolute
+  right: 17px
+  top: 16px
+  cursor: pointer
+
+.navContainer
+  display: table
+  width: 100%
+
+.primaryNav--desk
+  padding: 15px 0
+  .navLogo
+    img
+      max-height: 40px
+      @media breakpoints.lap.breakpoint
+        max-height: 35px
+
+  .primaryNav-items
+    position: static
+    visibility: visible
+    opacity: 1
+    background-color: transparent
+    *
+      visibility: visible
+      opacity: 1
+
+  .navigation-list
+    margin-top: 0
+    display: block
+    text-align: right
+    li
+      margin-bottom: 0
+      display: inline-block
+      margin-left: 20px
+
+      a
+        font-size: 18px
+        font-weight: 400
+        color: #FFFFFF
+        @media breakpoints.lap.breakpoint
+          font-size: 16px
+        &:hover
+          opacity: 0.8
+
+    li:last-child a:hover
+      opacity: 1
+
+  .navigation-list>li:last-child a
+    margin-bottom: 0

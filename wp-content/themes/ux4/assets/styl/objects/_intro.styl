@@ -1,4 +1,6 @@
-.section.intro
+.section.introText, .section.intro
+  .container
+    max-width: 800px
   p
     margin-bottom: 15px
   p:last-child
@@ -7,3 +9,6 @@
 .section.intro--contact
   font-size: 20px
   text-align: center
+  @media breakpoints.large.breakpoint
+    text-align: left
+

@@ -2,13 +2,18 @@
   margin-bottom: 50px
   text-align: center
 
-.iconBullets .container .grid .grid-1of1:last-child .iconBullet
-  margin-bottom: 0
+.iconBullets
+  .container
+    max-width: 800px
+    .grid .grid-1of1:last-child .iconBullet
+      margin-bottom: 0
 
 .iconBullet > .icon
   font-size: 80px
   color: uxBlue
   margin-bottom: 20px
+  @media breakpoints.large.breakpoint
+    font-size: 100px
 
 .section-headline
   @extend h3
@@ -18,6 +23,8 @@
 
 .iconBullet .combo
   margin-bottom: 20px
+  @media breakpoints.large.breakpoint
+    max-width: 670px
   .combo-first
     padding-right: 10px
     .icon

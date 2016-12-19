@@ -2,7 +2,7 @@ window.UXRotator = function() {
   return {
     el: null,
     displayCount: 4,
-    speed: 8000,
+    speed: 6000,
     startIndex: 0,
 
     init: function(el) {

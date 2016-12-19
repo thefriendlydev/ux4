@@ -47,7 +47,7 @@
       <?= the_field('client_logos_headline'); ?>
     </div>
 
-    <div class="">
+    <div class="clientLogosContainer">
       <?php $client_logos = get_field('client_logos');
         if( $client_logos ): ?>
           <div class="grid grid--middle clientLogos-rotator">
