@@ -6,6 +6,7 @@
   background-color: uxGrey
   border: 1px solid darken(uxGrey, 10)
   border-radius: 3px
+  display: inline-block
 
 .projectType
   margin-bottom: 20px
@@ -42,6 +43,10 @@
   background-color: uxLightBlue
   z-index: 5
   border-radius: 3px
+  @media breakpoints.lap.breakpoint
+    width: 300px
+  @media breakpoints.desk.breakpoint
+    width: 400px
   p
     color: #FFFFFF
     font-size: 14px
