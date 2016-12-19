@@ -14,6 +14,7 @@
 ?>
 
 <?php get_header(); ?>
+
 <div class="section hero">
   <div class="bgImage" style="background-image: url(<?= the_field('hero_background_image'); ?>)">
     <div class="blueOverlay">
@@ -45,19 +46,17 @@ if(count($clients) > 0):
 
 <div class="section-tabs ux-tabs u-noLarge" data-tab-content='.clientTiles'>
   <ul>
-    <li data-tab="application">Application</li>
-    <li data-tab="website">Website</li>
-    <li data-tab="consulting">Consulting</li>
+    <li class="uxTab" data-tab="application">Applications</li>
+    <li class="uxTab" data-tab="website">Websites</li>
+    <li class="uxTab" data-tab="consulting">Consulting</li>
   </ul>
 </div><!-- .section-tabs -->
 
 <div class="section-tabs ux-tabs u-noMobile" data-tab-content='.clientTiles'>
   <ul>
-    <?php foreach(Client::project_types() as $project_type): ?>
-      <li data-tab="<?= $project_type->slug; ?>">
-        <?= $project_type->name; ?>
-      </li>
-    <?php endforeach; ?>
+    <li class="uxTab" data-tab="application">Intuitive Applications</li>
+    <li class="uxTab" data-tab="website">Persuasive Websites</li>
+    <li class="uxTab" data-tab="consulting">UX Consulting</li>
   </ul>
 </div><!-- .section-tabs -->
 
