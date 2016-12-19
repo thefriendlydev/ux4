@@ -100,10 +100,10 @@
   <?php $testimonials = get_field('testimonials');
   if( $testimonials ): ?>
     <div class="container">
-      <div class="grid">
+      <div class="testimonials-slick">
         <?php foreach( $testimonials as $post): // variable must be called $post (IMPORTANT) ?>
           <?php setup_postdata($post); ?>
-          <div class="grid-1of1--palm grid-1of2--lap grid-1of3">
+          <div class="testimonial-slide">
             <div class="testimonialsContainer">
             <div class="testimonialsTop">
               <div class="bgImage" style="background-image: url(<?= the_field('test_background_image'); ?>)">
@@ -146,7 +146,7 @@
         <?php endforeach; ?>
         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
       </div>
-    </div>
+    </div><!-- .container -->
   <?php endif; ?>
 </div>
 
