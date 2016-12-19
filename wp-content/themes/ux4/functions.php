@@ -17,12 +17,18 @@ require_once 'includes/wordpress_functions/hide_editor.php';
 //-- Custom Post Type --------------------------------------------
 require_once 'includes/post_types/clients.php';
 require_once 'includes/post_types/services.php';
+require_once 'includes/post_types/careers.php';
 require_once 'includes/post_types/testimonials.php';
 
 //-- Custom Fields Definitions --------------------------------------------
 require_once 'includes/custom_fields/client.php';
 require_once 'includes/custom_fields/service.php';
+require_once 'includes/custom_fields/career.php';
+require_once 'includes/custom_fields/careers.php';
 require_once 'includes/custom_fields/about.php';
+require_once 'includes/custom_fields/solutions-applications.php';
+require_once 'includes/custom_fields/solutions-websites.php';
+require_once 'includes/custom_fields/solutions-consulting.php';
 require_once 'includes/custom_fields/contact.php';
 require_once 'includes/custom_fields/home.php';
 require_once 'includes/custom_fields/work.php';

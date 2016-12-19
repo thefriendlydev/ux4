@@ -100,8 +100,9 @@
   <?php $testimonials = get_field('testimonials');
   if( $testimonials ): ?>
     <div class="container">
-      <div class="grid">
-        <?php foreach( $testimonials as $post): // variable must be called $post (IMPORTANT) ?>
+      <div class="grid u-noLarge">
+        <?php $i = 0; foreach( $testimonials as $post): // variable must be called $post (IMPORTANT) ?>
+          <?php if(++$i > 1) break; ?>
           <?php setup_postdata($post); ?>
           <div class="grid-1of1--palm grid-1of2--lap grid-1of3">
             <div class="testimonialsContainer">
@@ -146,6 +147,107 @@
         <?php endforeach; ?>
         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
       </div>
+
+
+      <div class="grid u-noMobile u-noDesk">
+        <?php $i = 0; foreach( $testimonials as $post): // variable must be called $post (IMPORTANT) ?>
+          <?php if(++$i > 2) break; ?>
+          <?php setup_postdata($post); ?>
+          <div class="grid-1of1--palm grid-1of2--lap grid-1of3">
+            <div class="testimonialsContainer">
+            <div class="testimonialsTop">
+              <div class="bgImage" style="background-image: url(<?= the_field('test_background_image'); ?>)">
+                <div class="blueOverlayLight">
+                  <div class="combo combo--rev combo--middle testimonialHero">
+                    <div class="combo-first">
+                    <?php if( get_field('test_logo') ): ?>
+                      <div class="testimonialLogo">
+                        <img src="<?= the_field('test_logo'); ?>">
+                      </div>
+                    <?php else: ?>
+                      <div class="testLogoText">
+                        <?= the_field('test_company_if_no_logo'); ?>
+                      </div>
+                    <?php endif; ?>
+                    </div>
+                    <div class="combo-last">
+                      <img class="testimonialHeadshot" src="<?= the_field('test_headshot'); ?>">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonialsBottom">
+              <div class="theTestimonial">
+                <?= the_field('test_testimonial'); ?>
+              </div>
+              <div class="testimonial-name">
+                <?= the_field('test_full_name'); ?>
+              </div>
+              <div class="testimonial-title">
+                <?= the_field('test_title'); ?>
+              </div>
+              <div class="testimonial-company">
+                <?= the_field('test_company'); ?>
+              </div>
+            </div>
+          </div>
+          </div>
+        <?php endforeach; ?>
+        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+      </div>
+
+
+      <div class="grid u-noPortable">
+        <?php $i = 0; foreach( $testimonials as $post): // variable must be called $post (IMPORTANT) ?>
+          <?php if(++$i > 3) break; ?>
+          <?php setup_postdata($post); ?>
+          <div class="grid-1of1--palm grid-1of2--lap grid-1of3">
+            <div class="testimonialsContainer">
+            <div class="testimonialsTop">
+              <div class="bgImage" style="background-image: url(<?= the_field('test_background_image'); ?>)">
+                <div class="blueOverlayLight">
+                  <div class="combo combo--rev combo--middle testimonialHero">
+                    <div class="combo-first">
+                    <?php if( get_field('test_logo') ): ?>
+                      <div class="testimonialLogo">
+                        <img src="<?= the_field('test_logo'); ?>">
+                      </div>
+                    <?php else: ?>
+                      <div class="testLogoText">
+                        <?= the_field('test_company_if_no_logo'); ?>
+                      </div>
+                    <?php endif; ?>
+                    </div>
+                    <div class="combo-last">
+                      <img class="testimonialHeadshot" src="<?= the_field('test_headshot'); ?>">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonialsBottom">
+              <div class="theTestimonial">
+                <?= the_field('test_testimonial'); ?>
+              </div>
+              <div class="testimonial-name">
+                <?= the_field('test_full_name'); ?>
+              </div>
+              <div class="testimonial-title">
+                <?= the_field('test_title'); ?>
+              </div>
+              <div class="testimonial-company">
+                <?= the_field('test_company'); ?>
+              </div>
+            </div>
+          </div>
+          </div>
+        <?php endforeach; ?>
+        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+      </div>
+
+
+
     </div>
   <?php endif; ?>
 </div>

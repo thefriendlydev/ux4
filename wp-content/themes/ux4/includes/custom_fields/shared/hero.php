@@ -106,7 +106,14 @@ acf_add_local_field_group(array (
       array (
         'param' => 'page_template',
         'operator' => '==',
-        'value' => 'page-careers.php',
+        'value' => 'page-ux4-careers.php',
+      ),
+    ),
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'career',
       ),
     ),
     array (

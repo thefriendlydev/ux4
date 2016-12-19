@@ -45,13 +45,6 @@ acf_add_local_field_group(array (
         'value' => 'page-work.php',
       ),
     ),
-    array (
-      array (
-        'param' => 'page_template',
-        'operator' => '==',
-        'value' => 'page-solutions.php',
-      ),
-    ),
   ),
   'menu_order' => 3,
   'position' => 'acf_after_title',

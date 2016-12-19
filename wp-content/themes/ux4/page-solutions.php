@@ -15,44 +15,66 @@
 
 <?php get_header(); ?>
 
-<br><br><br>
+<div class="section hero">
+  <div class="bgImage" style="background-image: url(<?= the_field('hero_background_image'); ?>)">
+    <div class="blueOverlay">
+      <div class="container">
+        <div class="u-table">
+          <div class="heroContent">
+            <?php if( get_field('page_orientation_text') ): ?>
+              <div class="heroOrientation"><?= the_field('page_orientation_text'); ?></div>
+            <?php endif; ?>
+            <div class="heroHeadline"><?= the_field('hero_headline'); ?></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="section-tabs ux-tabs u-noLarge" data-tab-content='.tabContent' data-tab-default='applications' data-tab-allow-empty='false'>
-  <ul>
-    <li class="uxTab" data-tab="applications">Applications</li>
-    <li class="uxTab" data-tab="websites">Websites</li>
-    <li class="uxTab" data-tab="consulting">Consulting</li>
-  </ul>
-</div><!-- .section-tabs -->
+<div class="section solutionsTabs">
+  <div class="container">
+    <div class="section-tabs ux-tabs u-noLarge" data-tab-content='.tabContent' data-tab-default='applications' data-tab-allow-empty='false'>
+      <ul>
+        <li class="uxTab" data-tab="applications">Applications</li>
+        <li class="uxTab" data-tab="websites">Websites</li>
+        <li class="uxTab" data-tab="consulting">Consulting</li>
+      </ul>
+    </div><!-- .section-tabs -->
 
-<div class="section-tabs ux-tabs u-noMobile" data-tab-content='.tabContent' data-tab-default='applications'>
-  <ul>
-    <li class="uxTab" data-tab="applications">Intuitive Applications</li>
-    <li class="uxTab" data-tab="websites">Persuasive Websites</li>
-    <li class="uxTab" data-tab="consulting">UX Consulting</li>
-  </ul>
-</div><!-- .section-tabs -->
+    <div class="section-tabs ux-tabs u-noMobile" data-tab-content='.tabContent' data-tab-default='applications'>
+      <ul>
+        <li class="uxTab" data-tab="applications">Intuitive Applications</li>
+        <li class="uxTab" data-tab="websites">Persuasive Websites</li>
+        <li class="uxTab" data-tab="consulting">UX Consulting</li>
+      </ul>
+    </div><!-- .section-tabs -->
+  </div>
+</div>
 
 <div class="tabContent">
 
   <div data-tab-filter="applications">
-    <!-- Loop through application content here -->
-    <h3>Applications</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <?php get_template_part('partials/solutions/applications'); ?>
   </div>
 
   <div data-tab-filter="websites">
-    <!-- Loop through websites content here -->
-    <h3>Websites</h3>
-    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+    <?php get_template_part('partials/solutions/websites'); ?>
   </div>
 
   <div data-tab-filter="consulting">
-    <!-- Loop through websites content here -->
-    <h3>Training</h3>
-    <p>Incididunt ut labore, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <?php get_template_part('partials/solutions/consulting'); ?>
   </div>
 
+</div>
+
+<div class="section callout">
+  <div class="container">
+    <div class="calloutText">
+      <?= the_field('bottom_callout_text'); ?>
+    </div>
+    <a class="button" href="<?= the_field('bottom_button_link'); ?>"><?= the_field('bottom_button_text'); ?></a>
+  </div>
 </div>
 
 <?php get_footer(); ?>

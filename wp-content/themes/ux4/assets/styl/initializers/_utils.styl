@@ -10,6 +10,9 @@
 .u-noScroll
   overflow: hidden
 
+.u-tableRow
+  display: table-row
+
 .plainList
   margin: 0
   padding: 0
@@ -24,6 +27,14 @@
 
 .u-noLarge
   @media breakpoints.large.breakpoint
+    display: none
+
+.u-noDesk
+  @media breakpoints.desk.breakpoint
+    display: none
+
+.u-noPortable
+  @media breakpoints.portable.breakpoint
     display: none
 
 .u-noMobileEdi
