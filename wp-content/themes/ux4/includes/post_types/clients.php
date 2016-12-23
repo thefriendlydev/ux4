@@ -4,6 +4,7 @@ class Client {
 
   function __construct() {
     add_action('init', [$this, 'add_post_type']);
+    add_action('init', [$this, 'add_taxonomy']);
   }
 
   function add_post_type() {
@@ -38,6 +39,17 @@ class Client {
     register_post_type('client', $settings);
   }
 
+  function add_taxonomy() {
+    register_taxonomy(
+      'industry',
+      'client',
+      array(
+        'label' => 'Industry',
+        'rewrite' => ['slug' => 'industry' ]
+      )
+    );
+  }
+
   public static function posts() {
     $query = [
       'posts_per_page' => - 1,
@@ -59,6 +71,14 @@ class Client {
       'hide_empty' => false,
       'taxonomy'   => 'category',
       'slug'       => ['website', 'application', 'consulting']
+    ];
+    return get_terms($query);
+  }
+
+  public static function industries() {
+    $query = [
+      'hide_empty' => false,
+      'taxonomy'   => 'industry'
     ];
     return get_terms($query);
   }

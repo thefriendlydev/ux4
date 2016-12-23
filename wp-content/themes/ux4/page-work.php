@@ -59,17 +59,24 @@ if(count($clients) > 0):
     <li class="uxTab" data-tab="website">Persuasive Websites</li>
     <li class="uxTab" data-tab="consulting">Strategic Consulting</li>
   </ul>
+  <ul class="industryTabs">
+    <?php foreach(Client::industries() as $industry): ?>
+      <li class="uxTab uxTab--secondary" data-industry="<?= $industry->slug; ?>"><?= $industry->name; ?></li>
+    <?php endforeach; ?>
+  </ul>
 </div><!-- .section-tabs -->
 
 <div class="section clientTiles">
   <div class="container">
     <div class="grid">
-
       <?php foreach(Client::posts() as $client): $post = $client; setup_postdata($post); ?>
         <?php $filters = get_field('project_type'); ?>
-        <div class="grid-1of1--palm grid-1of3" data-tab-filter="<?php foreach( $filters as $filter ): ?><?= $filter->slug; ?> <?php endforeach; ?>">
+        <?php $industries = get_field('industry'); ?>
+        <div class="grid-1of1--palm grid-1of3" data-tab-filter="<?php foreach( $filters as $filter ): ?><?= $filter->slug; ?> <?php endforeach; ?>" data-tab-industry="<?php foreach( $industries as $industry ): ?><?= $industry->slug; ?> <?php endforeach; ?>">
           <div class="clientTile">
-            <a class="u-table" href="<?php the_permalink(); ?>">
+            <?php if (get_field('casestudy')) : ?>
+              <a class="u-table" href="<?php the_permalink(); ?>">
+            <?php endif; ?>
             <div class="clientTile-top">
               <div class="clientTile-topContainer">
                 <?php if (get_field('client_logo')) : ?>
@@ -83,7 +90,9 @@ if(count($clients) > 0):
                 <div class="clientTile-text"><?= the_field('hero_text'); ?></div>
               </div>
             </div>
-            </a>
+            <?php if (get_field('casestudy')) : ?>
+              </a>
+            <?php endif; ?>
             <?php if (get_field('casestudy')) : ?>
               <div class="clientTile-bottom">
                 <div class="clientTile-bottomContainer">
