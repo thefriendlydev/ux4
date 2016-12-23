@@ -38,7 +38,7 @@
   </div>
 </div>
 
-<div class="section contactDetails">
+<div class="section contactForm">
   <div class="container">
     <div class="detailsContainer">
       <div class="detailsTable">
@@ -61,11 +61,6 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="section contactForm">
-  <div class="container">
     <?php
       $contact_form_shortcode = get_field('contact_form_shortcode');
       echo do_shortcode($contact_form_shortcode);

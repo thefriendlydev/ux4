@@ -34,10 +34,10 @@
 
 <div class="section callout">
   <div class="container">
-    <div class="calloutText">
+    <div class="calloutText calloutText--hideCta">
       <?= the_field('callout_text'); ?>
     </div>
-    <a class="button" href="<?= the_field('callout_button_link'); ?>"><?= the_field('callout_button_text'); ?></a>
+    <a class="button u-noLarge" href="<?= the_field('callout_button_link'); ?>"><?= the_field('callout_button_text'); ?></a>
   </div>
 </div>
 

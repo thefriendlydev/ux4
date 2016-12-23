@@ -54,9 +54,10 @@ if(count($clients) > 0):
 
 <div class="section-tabs ux-tabs u-noMobile" data-tab-content='.clientTiles'>
   <ul>
+    <li class="uxTab uxTab--all" data-tab="all">All</li>
     <li class="uxTab" data-tab="application">Intuitive Applications</li>
     <li class="uxTab" data-tab="website">Persuasive Websites</li>
-    <li class="uxTab" data-tab="consulting">UX Consulting</li>
+    <li class="uxTab" data-tab="consulting">Strategic Consulting</li>
   </ul>
 </div><!-- .section-tabs -->
 
@@ -65,8 +66,10 @@ if(count($clients) > 0):
     <div class="grid">
 
       <?php foreach(Client::posts() as $client): $post = $client; setup_postdata($post); ?>
-        <div class="grid-1of1--palm grid-1of3" data-tab-filter="<?= get_field('project_type')[0]->slug; ?>">
+        <?php $filters = get_field('project_type'); ?>
+        <div class="grid-1of1--palm grid-1of3" data-tab-filter="<?php foreach( $filters as $filter ): ?><?= $filter->slug; ?> <?php endforeach; ?>">
           <div class="clientTile">
+            <a class="u-table" href="<?php the_permalink(); ?>">
             <div class="clientTile-top">
               <div class="clientTile-topContainer">
                 <?php if (get_field('client_logo')) : ?>
@@ -80,6 +83,7 @@ if(count($clients) > 0):
                 <div class="clientTile-text"><?= the_field('hero_text'); ?></div>
               </div>
             </div>
+            </a>
             <?php if (get_field('casestudy')) : ?>
               <div class="clientTile-bottom">
                 <div class="clientTile-bottomContainer">

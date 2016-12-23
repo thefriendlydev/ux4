@@ -2,14 +2,16 @@
   padding: 0 0 50px
 
 .detailsContainer
+  margin-bottom: 50px
   padding: 30px 20px
   text-align: center
-  background-color: uxGrey
-  border: 1px solid #DEDEDE
+  background-color: rgba(255,255,255,0.3)
+  border: 1px solid #FFFFFF
   border-radius: 3px
+  color: #FFFFFF
   @media breakpoints.large.breakpoint
     max-width: 500px
-    margin: 0 auto
+    margin: 0 auto 50px
 
 .detailsTable
   display: table
@@ -29,13 +31,17 @@
   .icon
     display: inline-block
     font-size: 20px
-    color: uxRed
+    color: #FFFFFF
     &.icon-email
       font-size: 17px
 .second
   font-size: 22px
   text-align: left
   padding-bottom: 20px
+  a
+    color: #FFFFFF
+    &:hover
+      opacity: 0.8
 
 .lastRow
   padding-bottom: 0
@@ -43,3 +49,6 @@
 @media breakpoints.large.breakpoint
   .wpcf7
     text-align: center
+
+div.wpcf7 .ajax-loader
+  display: none !important

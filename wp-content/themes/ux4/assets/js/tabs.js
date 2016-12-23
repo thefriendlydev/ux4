@@ -15,17 +15,50 @@ window.UXTabs = function() {
         this.setActiveTab($(tabNav).data('tab-default'));
       }
       $(tabNav).on('click', 'li', this.onclick.bind(this));
+
+      if (this.activeTab === null) {
+        $(".uxTab--all").addClass('active')
+      }
+
+      var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+      }
+
+      var filter = getUrlParameter('filter')
+
+      if (filter === 'application' || filter === 'website' || filter === 'consulting') {
+        this.setActiveTab(filter);
+      }
     },
 
     onclick: function(e) {
       e.preventDefault();
       var tab = $(e.currentTarget).data('tab');
-      if(tab !== this.activeTab) {
+
+      if (tab === 'all') {
+        this.setActiveTab(null);
+      } else if(tab !== this.activeTab) {
         this.setActiveTab(tab);
-      } else {
+      }
+      else {
         if(this.allowEmpty) {
           this.setActiveTab(null);
         }
+      }
+
+      if (this.activeTab === null) {
+        $(".uxTab--all").addClass('active')
       }
     },
 

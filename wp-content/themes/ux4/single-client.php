@@ -26,14 +26,16 @@
     <div class="projectDetailsContainer">
       <div class="u-bold u-bottom8">Project Type</div>
       <div class="projectType">
-        <?php $project_types = get_field('project_type');
-        if( sizeof($project_types) > 1 ): ?>
-          <?php echo implode(", ", $project_types); ?>
-        <?php else: ?>
-          <?php foreach( $project_types as $type ): ?>
+        <?php $project_types = get_field('project_type'); $counter = 0; ?>
+
+        <?php foreach( $project_types as $type ): ?>
+          <?php $counter++; ?>
+          <? if( sizeof($project_types) > $counter ): ?>
+            <?php echo $type->name; ?>,
+          <?php else: ?>
             <?php echo $type->name; ?>
-          <?php endforeach; ?>
-        <?php endif; ?>
+          <?php endif; ?>
+        <?php endforeach; ?>
       </div>
       <div class="u-bold u-bottom8">Services</div>
       <div class="projectServices">

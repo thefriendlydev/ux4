@@ -22,6 +22,7 @@ require_once 'includes/post_types/testimonials.php';
 
 //-- Custom Fields Definitions --------------------------------------------
 require_once 'includes/custom_fields/client.php';
+require_once 'includes/custom_fields/legal.php';
 require_once 'includes/custom_fields/service.php';
 require_once 'includes/custom_fields/career.php';
 require_once 'includes/custom_fields/careers.php';

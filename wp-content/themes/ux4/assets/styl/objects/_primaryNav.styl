@@ -12,6 +12,9 @@
   background-color: rgba(4,30,65,0.95)
   .navLogo img
     filter: none
+  .navigation-list > li:last-child a
+    @extend .button
+    font-size: 14px
 
 .primaryNav-items
   z-index: 1
@@ -31,8 +34,10 @@
 
 .navigation-list > li:last-child a
   @extend .button
+  @extend .button--white
+  font-size: 14px !important
   &:hover
-    color: #FFFFFF
+    color: uxBlue
 
 .navigation-list
   @extend .plainList
@@ -142,6 +147,8 @@
       margin-bottom: 0
       display: inline-block
       margin-left: 20px
+      &.current_page_item a
+        font-weight: 700
 
       a
         font-size: 18px

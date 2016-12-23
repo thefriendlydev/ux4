@@ -34,19 +34,19 @@
 
 <div class="section solutionsTabs">
   <div class="container">
-    <div class="section-tabs ux-tabs u-noLarge" data-tab-content='.tabContent' data-tab-default='applications' data-tab-allow-empty='false'>
+    <div class="section-tabs ux-tabs u-noLarge" data-tab-content='.tabContent' data-tab-default='application' data-tab-allow-empty='false'>
       <ul>
-        <li class="uxTab" data-tab="applications">Applications</li>
-        <li class="uxTab" data-tab="websites">Websites</li>
+        <li class="uxTab" data-tab="application">Applications</li>
+        <li class="uxTab" data-tab="website">Websites</li>
         <li class="uxTab" data-tab="consulting">Consulting</li>
       </ul>
     </div><!-- .section-tabs -->
 
-    <div class="section-tabs ux-tabs u-noMobile" data-tab-content='.tabContent' data-tab-default='applications'>
+    <div class="section-tabs ux-tabs u-noMobile" data-tab-content='.tabContent' data-tab-default='application'>
       <ul>
-        <li class="uxTab" data-tab="applications">Intuitive Applications</li>
-        <li class="uxTab" data-tab="websites">Persuasive Websites</li>
-        <li class="uxTab" data-tab="consulting">UX Consulting</li>
+        <li class="uxTab" data-tab="application">Intuitive Applications</li>
+        <li class="uxTab" data-tab="website">Persuasive Websites</li>
+        <li class="uxTab" data-tab="consulting">Strategic Consulting</li>
       </ul>
     </div><!-- .section-tabs -->
   </div>
@@ -54,11 +54,11 @@
 
 <div class="tabContent">
 
-  <div data-tab-filter="applications">
+  <div data-tab-filter="application">
     <?php get_template_part('partials/solutions/applications'); ?>
   </div>
 
-  <div data-tab-filter="websites">
+  <div data-tab-filter="website">
     <?php get_template_part('partials/solutions/websites'); ?>
   </div>
 
