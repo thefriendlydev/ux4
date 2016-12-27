@@ -26,20 +26,28 @@
         background-color: uxRed
         color: #FFFFFF
 
+.ux-tabs--solutions ul
+  margin: 0 auto 30px
+
 .ux-tabs .industryTabs
-  border: 2px solid uxLightBlue
+  @extend .plainList
+  border: 0
+  width: 100%
   .uxTab--secondary
-    color: uxLightBlue
+    color: uxText
     font-size: 12px
+    margin: 0 5px 10px
     padding: 8px 10px
-    border-right: 2px solid uxLightBlue
-    &:last-child
-      border-right: 0
+    border: 2px solid uxText
+    min-width: 0
+    display: inline-block
+    width: auto
+    border-radius: 3px
     &.active
-      background-color: uxLightBlue
+      background-color: uxText
       color: #FFFFFF
     &:hover
-      background-color: uxLightBlue
+      background-color: uxText
       color: #FFFFFF
 
 .uxTab

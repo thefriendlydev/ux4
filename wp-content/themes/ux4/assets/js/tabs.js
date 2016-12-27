@@ -48,7 +48,6 @@ window.UXTabs = function() {
       var tab = $(e.currentTarget).data('tab');
       var tabIndustry = $(e.currentTarget).data('industry');
 
-
       if (tab === 'all') {
         this.setActiveTab(null);
       } else if (tab === undefined) {
@@ -58,8 +57,8 @@ window.UXTabs = function() {
           this.setActiveIndustry(null)
         }
       } else if(tab !== this.activeTab) {
-        this.setActiveTab(tab);
         this.setActiveIndustry(null)
+        this.setActiveTab(tab);
       }
       else {
         if(this.allowEmpty) {

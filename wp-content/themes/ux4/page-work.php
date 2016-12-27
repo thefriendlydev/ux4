@@ -50,6 +50,11 @@ if(count($clients) > 0):
     <li class="uxTab" data-tab="website">Websites</li>
     <li class="uxTab" data-tab="consulting">Consulting</li>
   </ul>
+  <ul class="industryTabs">
+    <?php foreach(Client::industries() as $industry): ?>
+      <li class="uxTab uxTab--secondary" data-industry="<?= $industry->slug; ?>"><?= $industry->name; ?></li>
+    <?php endforeach; ?>
+  </ul>
 </div><!-- .section-tabs -->
 
 <div class="section-tabs ux-tabs u-noMobile" data-tab-content='.clientTiles'>

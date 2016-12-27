@@ -57,6 +57,9 @@
           </div>
           <div class="second lastRow">
             <a href="mailto:<?= the_field('email_address'); ?>" class="email"><?= the_field('email_address'); ?></a>
+            <?php if( get_field('second_email_address') ): ?>
+              <a href="mailto:<?= the_field('second_email_address'); ?>" class="email"><?= the_field('second_email_address'); ?></a>
+            <?php endif; ?>
           </div>
         </div>
       </div>

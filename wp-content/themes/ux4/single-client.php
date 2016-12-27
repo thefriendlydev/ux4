@@ -6,7 +6,15 @@
       <div class="container">
         <div class="u-table">
           <div class="heroContent">
-            <div class="heroLogo"><img src="<?= the_field('client_logo'); ?>"></div>
+            <div class="heroLogo">
+              <?php if( get_field('client_alternate_logo') ): ?>
+                <img src="<?= the_field('client_alternate_logo'); ?>">
+              <?php elseif(get_field('client_logo')): ?>
+                <img src="<?= the_field('client_logo'); ?>">
+              <?php else: ?>
+                <div class="heroHeadline"><?= the_field('client_logo_text'); ?></div>
+              <?php endif; ?>
+            </div>
             <div class="heroText u-semiBold"><?= the_field('hero_text'); ?></div>
           </div>
         </div>
@@ -24,7 +32,7 @@
 <div class="section projectDetails">
   <div class="container">
     <div class="projectDetailsContainer">
-      <div class="u-bold u-bottom8">Project Type</div>
+      <div class="u-semiBold u-bottom8">Project Type</div>
       <div class="projectType">
         <?php $project_types = get_field('project_type'); $counter = 0; ?>
 
@@ -37,7 +45,19 @@
           <?php endif; ?>
         <?php endforeach; ?>
       </div>
-      <div class="u-bold u-bottom8">Services</div>
+      <?php if( have_rows('project_urls') ): ?>
+        <div class="u-semiBold u-bottom8">Website URL</div>
+        <div class="u-bottom20">
+          <?php while( have_rows('project_urls') ): the_row(); ?>
+            <div class="projectUrl">
+              <a href="<?= the_sub_field('project_url'); ?>" target="_blank">
+                <?= the_sub_field('project_url'); ?>
+              </a>
+            </div>
+          <?php endwhile; ?>
+        </div>
+      <?php endif; ?>
+      <div class="u-semiBold u-bottom8">Services</div>
       <div class="projectServices">
         <?php $services = get_field('services');
 

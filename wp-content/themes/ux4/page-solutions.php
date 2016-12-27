@@ -34,7 +34,7 @@
 
 <div class="section solutionsTabs">
   <div class="container">
-    <div class="section-tabs ux-tabs u-noLarge" data-tab-content='.tabContent' data-tab-default='application' data-tab-allow-empty='false'>
+    <div class="section-tabs ux-tabs u-noLarge ux-tabs--solutions" data-tab-content='.tabContent' data-tab-default='application' data-tab-allow-empty='false'>
       <ul>
         <li class="uxTab" data-tab="application">Applications</li>
         <li class="uxTab" data-tab="website">Websites</li>
@@ -42,7 +42,7 @@
       </ul>
     </div><!-- .section-tabs -->
 
-    <div class="section-tabs ux-tabs u-noMobile" data-tab-content='.tabContent' data-tab-default='application'>
+    <div class="section-tabs ux-tabs ux-tabs--solutions u-noMobile" data-tab-content='.tabContent' data-tab-default='application'>
       <ul>
         <li class="uxTab" data-tab="application">Intuitive Applications</li>
         <li class="uxTab" data-tab="website">Persuasive Websites</li>
