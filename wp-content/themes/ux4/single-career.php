@@ -62,7 +62,7 @@
     <div class="calloutText">
       <?= the_field('bottom_callout_text'); ?>
     </div>
-    <a class="button" href="mailto:asuleiman@ux4sight.com?subject=Job Application: <?php the_title(); ?>"><?= the_field('bottom_button_text'); ?></a>
+    <a class="button" href="mailto:careers@ux4sight.com?subject=Job Application: <?php the_title(); ?>"><?= the_field('bottom_button_text'); ?></a>
   </div>
 </div>
 

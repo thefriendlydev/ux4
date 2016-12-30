@@ -8,9 +8,9 @@
           <?= the_field('address', 'option'); ?>
           </div>
           <div class="footerSocial">
-            <a class="icon icon-facebook-square" href="<?= the_field('facebook_link', 'option'); ?>"></a>
-            <a class="icon icon-twitter-square" href="<?= the_field('twitter_link', 'option'); ?>"></a>
-            <a class="icon icon-linkedin-square" href="<?= the_field('linkedin_link', 'option'); ?>"></a>
+            <a class="icon icon-facebook-square" target="_blank" href="<?= the_field('facebook_link', 'option'); ?>"></a>
+            <a class="icon icon-twitter-square" target="_blank" href="<?= the_field('twitter_link', 'option'); ?>"></a>
+            <a class="icon icon-linkedin-square" target="_blank" href="<?= the_field('linkedin_link', 'option'); ?>"></a>
           </div>
           <div class="footerLegal">
             <?= the_field('legal', 'option'); ?>
