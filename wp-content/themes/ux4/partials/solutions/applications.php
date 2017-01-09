@@ -88,8 +88,12 @@
           <div class="grid grid--solutions">
             <div class="grid-1of1--palm grid-1of2--lap grid-1of2">
               <div class="clientTile">
-                <a class="u-table" href="<?php the_permalink(); ?>">
-                <div class="clientTile-top">
+                <?php if (get_field('casestudy')) : ?>
+                  <a class="u-table" href="<?php the_permalink(); ?>">
+                  <div class="clientTile-top">
+                <?php else : ?>
+                  <div class="clientTile-top clientTile--noCase">
+                <?php endif; ?>
                   <div class="clientTile-topContainer">
                     <?php if (get_field('client_logo')) : ?>
                       <div>
@@ -102,11 +106,13 @@
                     <div class="clientTile-text"><?= the_field('hero_text'); ?></div>
                   </div>
                 </div>
-                </a>
+                <?php if (get_field('casestudy')) : ?>
+                  </a>
+                <?php endif; ?>
                 <?php if (get_field('casestudy')) : ?>
                   <div class="clientTile-bottom">
                     <div class="clientTile-bottomContainer">
-                      <a href="<?php the_permalink(); ?>"><span>Read the case study</span> <i class="icon icon-circle-right-arrow"></i></a>
+                      <a href="<?php the_permalink(); ?>"><span>Read the case study</span> &nbsp; ></a>
                     </div>
                   </div>
                 <?php endif; ?>

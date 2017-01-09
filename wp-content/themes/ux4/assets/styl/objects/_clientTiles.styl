@@ -6,9 +6,9 @@
   margin-bottom: 0
 
 .clientTile
-  border: 2px solid uxBlue
   text-align: center
-  border-radius: 3px
+  background: #e7e8e9
+  border-radius: 15px
   margin-bottom: 30px
   width: 100%
   height: 100%
@@ -16,31 +16,51 @@
 
 .clientTile-top
   height: 100%
+  background-color: #e7e8e9
   display: table-row
+  border-radius: 15px 15px 0 0
 
 .clientTile-topContainer
   padding: 35px 20px
   display: table-cell
   vertical-align: middle
+  border-radius: 15px 15px 0 0
+
+.clientTile--noCase
+  border-radius: 15px
+  .clientTile-topContainer
+    border-radius: 15px
 
 .clientTile-logo
-  max-height: 60px
-  max-width: 150px
+  max-height: 90px
+  max-width: 85%
   width: auto
   height: auto
   margin: 0 auto 10px
 
+.clientTile-text
+  color: uxText
+  font-weight: 600
+  font-size: 14px
+
 .clientTile-bottomContainer
-  padding: 10px 20px
+  padding: 8px 20px
+  border-radius: 0 0 15px 15px
+  display: table-cell
+  vertical-align: middle
+
 .clientTile-bottom
-  background-color: rgba(4,30,65,0.4)
+  background-color: uxBlue
   text-align: center
   display: table-row
   height: 1px
+  border-radius: 0 0 15px 15px
   a
     display: inline-block
     color: #FFFFFF
     text-align: center
+    font-size: 14px
+    font-weight: 600
     &:hover
       opacity: 0.8
     span, i
@@ -53,7 +73,7 @@
     font-size: 20px
 
 .clientTile-logoText
-  font-size: 32px
+  font-size: 52px
   font-weight: 600
   margin-bottom: 10px
   color: uxBlue

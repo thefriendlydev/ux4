@@ -22,7 +22,7 @@
         <div class="u-table">
           <div class="heroContent">
             <?php if( get_field('page_orientation_text') ): ?>
-              <div class="heroOrientation"><?= the_field('page_orientation_text'); ?></div>
+              <div class="heroOrientation u-noLarge"><?= the_field('page_orientation_text'); ?></div>
             <?php endif; ?>
             <div class="heroHeadline"><?= the_field('hero_headline'); ?></div>
           </div>
