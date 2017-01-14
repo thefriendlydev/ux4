@@ -7,7 +7,7 @@
 
 .clientTile
   text-align: center
-  background: #e7e8e9
+  background: lighten(#e7e8e9, 6)
   border-radius: 15px
   margin-bottom: 30px
   width: 100%
@@ -16,7 +16,7 @@
 
 .clientTile-top
   height: 100%
-  background-color: #e7e8e9
+  background-color: lighten(#e7e8e9, 6)
   display: table-row
   border-radius: 15px 15px 0 0
 
@@ -42,12 +42,16 @@
   color: uxText
   font-weight: 600
   font-size: 14px
+  max-width: 75%
+  margin: 0 auto
 
 .clientTile-bottomContainer
   padding: 8px 20px
   border-radius: 0 0 15px 15px
   display: table-cell
   vertical-align: middle
+  a span
+    padding-bottom: 3px
 
 .clientTile-bottom
   background-color: uxBlue

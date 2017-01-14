@@ -12,7 +12,7 @@
   <link href="<?php bloginfo('template_url'); ?>/dist/img/favicon.ico" rel="icon" type="image/x-icon">
   <link href="<?php bloginfo('template_url'); ?>/dist/<?php AssetLink::manifest_url('application.css'); ?>" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.8.0/jquery.modal.min.css" rel="stylesheet">
-  <script src="<?php bloginfo('template_url'); ?>/dist/<?php AssetLink::manifest_url('application.js'); ?>"></script>
+  <script src="<?php bloginfo('template_url'); ?>/dist/<?php AssetLink::manifest_url('application-min.js'); ?>"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.8.0/jquery.modal.js"></script>
 
 

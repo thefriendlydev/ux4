@@ -44,7 +44,7 @@ window.UXRotator = function() {
       }, this.speed);
     },
 
-    nextLogo(currentLogo) {
+    nextLogo: function(currentLogo) {
       var currentIndex;
       $(this.logos).each(function(index, item) {
         if($(item).data('id') === $(currentLogo).data('id')) {
