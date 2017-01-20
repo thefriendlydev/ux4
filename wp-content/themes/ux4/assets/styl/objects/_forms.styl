@@ -1,43 +1,34 @@
 .formLabel
   font-size: 16px
-  color: #FFFFFF
+  font-weight: 600
   margin-bottom: 5px
-  @media breakpoints.large.breakpoint
-    max-width: 500px
-    margin: 0 auto 10px
-    text-align: left
-  .required
-    color: uxGold
+  text-align: left
 
 select
   box-sizing: border-box
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
-  border: 1px solid #FFFFFF
-  border-radius: 2px
-  background: rgba(255,255,255,0.3)
-  padding: 13px 15px
+  border: 1px solid uxText
+  padding: 8px 12px
   transition: all 0.2s ease-in-out
   margin: 0
-  margin-bottom: 15px
   font-family: primaryFont
-  font-size: 16px
+  font-size: 14px
   outline: 0
   width: 100%
-  color: #FFFFFF
+  color: uxText
+  background: #FFFFFF
   box-shadow: none
   background-image: none
   position: relative
-  @media breakpoints.large.breakpoint
-    max-width: 500px
-    margin-bottom: 25px
+  border-radius: 0
   &:focus
     outline: none
 
 .your-interest
   &:after
-    content: "\e919"
+    content: "\e915"
     font-family: icomoon
     font-weight: normal;
     font-style: normal;
@@ -45,26 +36,25 @@ select
     position: absolute
     right: 15px
     top: 3px
-    color: #FFFFFF
+    color: #a3a3a3
     pointer-events: none
+    transform: rotate(90deg)
+
 input, textarea
   box-sizing: border-box
   -webkit-appearance: none
-  border: 1px solid #FFFFFF
-  border-radius: 2px
-  background: rgba(255,255,255,0.3)
-  padding: 13px 15px
+  border: 1px solid uxText
+  padding: 8px 12px
   transition: all 0.2s ease-in-out
   margin: 0
-  margin-bottom: 15px
   font-family: primaryFont
   font-size: 16px
   outline: 0
   width: 100%
-  color: #FFFFFF
-  @media breakpoints.large.breakpoint
-    max-width: 500px
-    margin-bottom: 25px
+  color: uxText
+
+textarea
+  height: 115px
 
   &:focus, &:active
     outline: 0
@@ -74,4 +64,5 @@ textarea
 
 input[type=submit]
   width: auto
+  height: auto
 

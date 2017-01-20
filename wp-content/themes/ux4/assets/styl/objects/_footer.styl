@@ -1,36 +1,39 @@
 .section.footer
-  background-color: uxText
+  background-color: #e7e8e8
   padding: 25px 15px
   text-align: center
   a
-    color: #FFFFFF
+    color: uxText
     &:hover
       color: uxGold
 
-.footerPhone
+.footerPhone, .footerName, .footerAddress, .footerLegal
   font-weight: 600
   margin-bottom: 8px
-  color: #FFFFFF
+  color: uxText
   a
-    color: #FFFFFF !important
+    color: uxText !important
     &:hover
       color: uxGold !important
 
-.footerAddress, .footerSocial
+.footerName, .footerPhone, .footerAddress
+  display: inline-block
+  margin: 8px
+
+.footerPhone, .footerSocial
   margin-bottom: 25px
-  color: #FFFFFF
+  color: uxText
 
 .footerSocial .icon
-  margin: 0 20px
-  color: #FFFFFF
+  margin: 0 15px
+  color: uxText
   font-size: 40px
   &:hover
-    darken(#FFFFFF, 10)
+    darken(uxText, 10)
 
 .footerLegal
-  font-size: 13px
-  color: #FFFFFF
+  color: uxText
   a
-    color: #FFFFFF
+    color: uxText
     &:hover
       color: uxGold

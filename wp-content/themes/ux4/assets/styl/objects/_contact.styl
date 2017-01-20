@@ -3,15 +3,13 @@
 
 .detailsContainer
   margin-bottom: 50px
-  padding: 30px 20px
+  padding: 15px 10px
   text-align: center
-  background-color: rgba(255,255,255,0.3)
-  border: 1px solid #FFFFFF
-  border-radius: 3px
-  color: #FFFFFF
+  background-color: #FFFFFF
+  color: uxText
   @media breakpoints.large.breakpoint
-    max-width: 500px
-    margin: 0 auto 50px
+    max-width: 80%
+    margin: 0 auto 30px
 
 .detailsTable
   display: table
@@ -27,23 +25,24 @@
   vertical-align: middle
   width: 0
   padding-right: 15px
-  padding-bottom: 20px
+  padding-bottom: 15px
   vertical-align: top
   padding-top: 5px
   .icon
     display: inline-block
-    font-size: 20px
-    color: #FFFFFF
+    font-size: 17px
+    color: uxText
     &.icon-email
-      font-size: 17px
+      font-size: 14px
 .second
-  font-size: 22px
+  font-size: 18px
   text-align: left
   padding-bottom: 20px
   a
-    color: #FFFFFF
+    color: uxText
     &:hover
       opacity: 0.8
+      color: uxGold
 
 .lastRow
   padding-bottom: 0
@@ -59,6 +58,51 @@ div.wpcf7 .ajax-loader
   display: none !important
 
 .phoneNumber a
-  color: #FFFFFF !important
+  color: uxText !important
   &:hover
     color: uxGold !important
+
+.contactForm-title
+  font-weight: 700
+  margin-bottom: 15px
+  text-align: center
+
+.formInfoContainer
+  margin-bottom: 30px
+  text-align: center
+
+.section.intro.contactForm
+  padding-top: 0
+
+.contactForm-title--second
+  @media breakpoints.palm.breakpoint
+    padding-top: 40px
+
+.mapContainer > div
+  width: 100% !important
+
+.formInfoContainer--map
+  margin-bottom: 99px
+  @media breakpoints.palm.breakpoint
+    margin-bottom: 30px
+
+.formInfoContainer--map
+  .combo
+    max-width: 80%
+    margin: 30px auto 76px
+    width: auto
+    @media breakpoints.palm.breakpoint
+      margin: 30px auto
+      max-width: 100%
+    .combo-first
+      padding-top: 4px
+      padding-right: 15px
+      .icon
+        color: uxText
+        font-size: 22px
+    .combo-last
+      font-size: 18px
+      padding-left: 0
+      text-align: left
+      width: auto
+      text-align: left

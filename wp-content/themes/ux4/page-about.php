@@ -49,6 +49,12 @@
       </div>
       <div class="leadName"><?= the_field('abdul_name_and_designations'); ?></div>
       <div class="leadTitle"><?= the_field('abdul_title'); ?></div>
+      <div class="leadInfo">
+        <span>
+          <a href="mailto:<?= the_field('abdul_email'); ?>"><?= the_field('abdul_email'); ?></a>
+        </span>
+        <span><?= the_field('abdul_linkedin'); ?></span>
+      </div>
     </div>
     <div class="aboutText"><?= the_field('about_text'); ?></div>
   </div>

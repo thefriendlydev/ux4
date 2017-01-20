@@ -20,15 +20,28 @@
 
 .leadPhoto img
   display: inline-block
-  border-radius: 3px
-  max-height: 180px
-  max-width: 180px
+  max-width: 100%
   height: auto
-  width: auto
+  margin-bottom: 10px
 
 .leadName
   font-size: 18px
   margin-bottom: 4px
+
+.leadInfo
+  margin-top: 15px
+  a
+    color: uxText
+    &:hover
+      color: lighten(uxText, 10)
+  span:first-child
+    margin-right: 10px
+  span:last-child
+    margin-left: 10px
+  @media breakpoints.palm.breakpoint
+    span:first-child, span:last-child
+      margin-right: 0
+      margin-left: 0
 
 .aboutText p
   margin-bottom: 15px

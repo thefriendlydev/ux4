@@ -38,36 +38,67 @@
   </div>
 </div>
 
-<div class="section contactForm">
+<div class="section intro contactForm">
   <div class="container">
-    <div class="detailsContainer">
-      <div class="detailsTable">
-        <div class="detailsTable-row">
-          <div class="first">
-            <div class="icon icon-phone"></div>
-          </div>
-          <div class="second">
-            <div class="phoneNumber"><?= the_field('phone_number'); ?></div>
+    <div class="grid">
+      <div class="grid-1of2 grid-1of1--palm">
+        <div class="contactForm-title">
+          <?= the_field('left_title'); ?>
+        </div>
+        <div class="formInfoContainer">
+          <div class="detailsContainer">
+            <div class="detailsTable">
+              <div class="detailsTable-row">
+                <div class="first">
+                  <div class="icon icon-phone"></div>
+                </div>
+                <div class="second">
+                  <div class="phoneNumber"><?= the_field('phone_number'); ?></div>
+                </div>
+              </div>
+
+              <div class="detailsTable-row">
+                <div class="first lastRow">
+                  <div class="icon icon-email"></div>
+                </div>
+                <div class="second lastRow">
+                  <a href="mailto:<?= the_field('email_address'); ?>" class="email"><?= the_field('email_address'); ?></a>
+                  <?php if( get_field('second_email_address') ): ?>
+                    <a href="mailto:<?= the_field('second_email_address'); ?>" class="email"><?= the_field('second_email_address'); ?></a>
+                  <?php endif; ?>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="cf7Form">
+          <?php
+            $contact_form_shortcode = get_field('contact_form_shortcode');
+            echo do_shortcode($contact_form_shortcode);
+          ?>
+        </div>
+      </div>
 
-        <div class="detailsTable-row">
-          <div class="first lastRow">
-            <div class="icon icon-email"></div>
+      <div class="grid-1of2 grid-1of1--palm">
+        <div class="contactForm-title contactForm-title--second">
+          <?= the_field('right_title'); ?>
+        </div>
+        <div class="formInfoContainer formInfoContainer--map">
+          <div class="combo">
+            <div class="combo-first">
+              <i class="icon icon-location2"></i>
+            </div>
+            <div class="combo-last">
+              <div><?= the_field('form_street_address'); ?></div>
+              <div><?= the_field('city_state_zip'); ?></div>
+            </div>
           </div>
-          <div class="second lastRow">
-            <a href="mailto:<?= the_field('email_address'); ?>" class="email"><?= the_field('email_address'); ?></a>
-            <?php if( get_field('second_email_address') ): ?>
-              <a href="mailto:<?= the_field('second_email_address'); ?>" class="email"><?= the_field('second_email_address'); ?></a>
-            <?php endif; ?>
-          </div>
+        </div>
+        <div class="mapContainer">
+          <?= the_field('map_embed_code'); ?>
         </div>
       </div>
     </div>
-    <?php
-      $contact_form_shortcode = get_field('contact_form_shortcode');
-      echo do_shortcode($contact_form_shortcode);
-    ?>
   </div>
 </div>
 
