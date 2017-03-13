@@ -16,7 +16,7 @@
 
   $( document ).ready(function() {
     var menuToggle = false
-    $(".icon-menu, .icon-close").click(function () {
+    $(".icon-menu, .icon-close--nav").click(function () {
       menuToggle = !menuToggle
 
       if (menuToggle) {

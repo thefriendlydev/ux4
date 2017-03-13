@@ -1,0 +1,155 @@
+video#bgvid
+  position: absolute
+  top: 50%
+  left: 50%
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  z-index: -100
+  -ms-transform: translateX(-50%) translateY(-30%)
+  -moz-transform: translateX(-50%) translateY(-30%)
+  -webkit-transform: translateX(-50%) translateY(-30%)
+  transform: translateX(-50%) translateY(-30%)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: top center
+
+video#bgvid
+  -moz-animation-name: fadeInVideo
+  -moz-animation-iteration-count: once
+  -moz-animation-timing-function: ease-in
+  -moz-animation-duration: 3s
+
+  -webkit-animation-name: fadeInVideo
+  -webkit-animation-iteration-count: once
+  -webkit-animation-timing-function: ease-in
+  -webkit-animation-duration: 3s
+
+  animation-name: fadeInVideo
+  animation-iteration-count: once
+  animation-timing-function: ease-in
+  animation-duration: 3s
+
+@-moz-keyframes fadeInVideo
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@-webkit-keyframes fadeInVideo
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@keyframes fadeInVideo
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+video::-webkit-media-controls {
+  overflow: hidden !important
+}
+video::-webkit-media-controls-enclosure {
+  width: calc(100% + 32px);
+  margin-left: auto;
+}
+
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+}
+
+.heroPopUp
+  margin-top: 40px
+  .openVideo:hover
+    .icon-play_circle_outline
+      color: uxText
+  .icon-play_circle_outline
+    color: #FFFFFF
+    cursor: pointer
+    transition: all 0.2s ease-in-out
+    font-size: 40px
+  .openVideo
+    padding: 7px 10px
+  .combo
+    .combo-first
+      padding-right: 6px
+    .combo-last
+      padding-left: 0
+      font-size: 22px
+      font-weight: 600
+
+.heroPopUpVideo, .videoOverlay
+  position: fixed
+  z-index: 99
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+
+.videoOverlay
+  background-color: rgba(4,30,65,.97)
+
+.videoContent
+  position: relative
+  padding: 50px 50px 25px
+  @media breakpoints.palm.breakpoint
+    padding: 45px 10px 20px
+
+.videoContainer
+  position: absolute
+  text-align: center
+  z-index: 110
+  background-color: #FFFFFF
+  border-radius: 3px
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  video
+    width: 900px
+    @media breakpoints.lap.breakpoint
+      width: 600px
+    @media breakpoints.palm.breakpoint
+      width: 320px
+
+  .icon-close
+    font-size: 20px
+    position: absolute
+    display: block
+    top: 15px !important
+    right: 15px !important
+    color: uxLightBlue
+    &:hover
+      color: darken(uxLightBlue, 10)
+    @media breakpoints.palm.breakpoint
+      top: 10px !important
+      right: 10px !important
+      font-size: 15px
+
+.button--popUp
+  margin-top: 20px
+
+.heroPopUpVideo
+  visibility: hidden
+  opacity: 0
+  transition: all 0.4s ease-in-out
+
+.heroPopUpVideo *
+  visibility: hidden
+  opacity: 0
+  transition: all 0.4s ease-in-out
+
+.heroPopUpVideo.active
+  visibility: visible
+  opacity: 1
+  *
+    visibility: visible
+    opacity: 1

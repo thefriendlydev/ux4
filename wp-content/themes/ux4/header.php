@@ -31,7 +31,7 @@
             <img src="<?php bloginfo('template_url'); ?>/dist/img/logo.png">
           </a>
           <div class="icon icon-menu"></div>
-          <div class="icon icon-close"></div>
+          <div class="icon icon-close icon-close--nav"></div>
           <?php wp_nav_menu( array( 'theme_location' => 'primary-nav', 'container_class' => 'primaryNav-items', 'menu_class' => 'navigation-list' ) ); ?>
         </div>
       </div>

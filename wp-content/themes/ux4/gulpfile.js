@@ -23,6 +23,7 @@ var vendorJs = [
   'bower_components/angular-animate/angular-animate.js',
   'bower_components/jquery/dist/jquery.min.js',
   'bower_components/lodash/lodash.js',
+  'node_modules/iphone-inline-video/dist/iphone-inline-video.js',
   'bower_components/matchHeight/dist/jquery.matchHeight.js'
 ]
 

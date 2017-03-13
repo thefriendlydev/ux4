@@ -34,6 +34,7 @@
     "gulp-stylus": "^2.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.5",
+    "iphone-inline-video": "^2.0.2",
     "rev-del": "^1.0.4",
     "run-sequence": "^1.1.2",
     "standard": "^3.13.1"
